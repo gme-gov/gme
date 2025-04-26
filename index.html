@@ -148,4 +148,21 @@
             visionTitle: "Why this World Government?",
             visionText: "The world faces rising economic and social inequalities. Wealthy nations dominate global decision-making, while the poorest nations remain marginalized. It is time to change this.",
             ourVisionTitle: "Our Vision",
-            ourVisionText: "Our goal is to create a fair global government where every nation has an equal voice, and decisions are made in the interest of all
+            ourVisionText: "Our goal is to create a fair global government where every nation has an equal voice, and decisions are made in the interest of all."
+        }
+    };
+
+    function setLanguage(lang) {
+        document.getElementById("title").innerHTML = translations[lang].title;
+        document.getElementById("subtitle").innerHTML = translations[lang].subtitle;
+        document.getElementById("manifesto-title").innerHTML = translations[lang].manifestoTitle;
+        document.getElementById("manifesto-text").innerHTML = translations[lang].manifestoText;
+        document.getElementById("vision-title").innerHTML = translations[lang].visionTitle;
+        document.getElementById("vision-text").innerHTML = translations[lang].visionText;
+        document.getElementById("our-vision-title").innerHTML = translations[lang].ourVisionTitle;
+        document.getElementById("our-vision-text").innerHTML = translations[lang].ourVisionText;
+    }
+</script>
+
+</body>
+</html>
