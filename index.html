@@ -47,30 +47,36 @@
 <body>
 
 <header>
-    <h1>Gouvernement Mondial pour l'Équité</h1>
-    <p>Unissez les nations pour un avenir plus équitable.</p>
+    <h1 id="title">Gouvernement Mondial pour l'Équité</h1>
+    <p id="subtitle">Unissez les nations pour un avenir plus équitable.</p>
 </header>
 
 <nav>
-    <a href="#">Français</a>
-    <a href="#">Swahili</a>
-    <a href="#">Haoussa</a>
-    <!-- Ajoutez plus de liens pour d'autres langues -->
+    <a href="#" onclick="setLanguage('fr')">Français</a>
+    <a href="#" onclick="setLanguage('sw')">Swahili</a>
+    <a href="#" onclick="setLanguage('ha')">Haoussa</a>
+    <a href="#" onclick="setLanguage('zh')">Chinois</a>
+    <a href="#" onclick="setLanguage('es')">Espagnol</a>
+    <a href="#" onclick="setLanguage('en')">Anglais</a>
+    <a href="#" onclick="setLanguage('ar')">Arabe</a>
+    <a href="#" onclick="setLanguage('bn')">Bengali</a>
+    <a href="#" onclick="setLanguage('pt')">Portugais</a>
+    <a href="#" onclick="setLanguage('ru')">Russe</a>
 </nav>
 
 <section>
-    <h2>Manifesto pour un Gouvernement Mondial pour l'Équité</h2>
-    <p>
+    <h2 id="manifesto-title">Manifesto pour un Gouvernement Mondial pour l'Équité</h2>
+    <p id="manifesto-text">
         Nous vivons dans un monde de plus en plus interconnecté, où les défis mondiaux nécessitent une action collective. 
         Le Gouvernement Mondial pour l'Équité vise à créer un cadre où tous les pays, en particulier les plus pauvres, ont une voix égale dans la gouvernance mondiale.
     </p>
-    <h3>Pourquoi ce Gouvernement Mondial ?</h3>
-    <p>
+    <h3 id="vision-title">Pourquoi ce Gouvernement Mondial ?</h3>
+    <p id="vision-text">
         Le monde est confronté à des inégalités économiques et sociales croissantes. Les nations riches dominent les décisions mondiales, 
         tandis que les pays les plus pauvres restent marginalisés. Il est temps de changer cela.
     </p>
-    <h3>Notre Vision</h3>
-    <p>
+    <h3 id="our-vision-title">Notre Vision</h3>
+    <p id="our-vision-text">
         Notre objectif est de créer un gouvernement mondial équitable où chaque nation a une voix égale et où les décisions sont prises dans l'intérêt de tous.
     </p>
 </section>
@@ -79,5 +85,121 @@
     <p>&copy; 2025 Gouvernement Mondial pour l'Équité - Tous droits réservés</p>
 </footer>
 
+<script>
+    const translations = {
+        fr: {
+            title: "Gouvernement Mondial pour l'Équité",
+            subtitle: "Unissez les nations pour un avenir plus équitable.",
+            manifestoTitle: "Manifesto pour un Gouvernement Mondial pour l'Équité",
+            manifestoText: "Nous vivons dans un monde de plus en plus interconnecté, où les défis mondiaux nécessitent une action collective. Le Gouvernement Mondial pour l'Équité vise à créer un cadre où tous les pays, en particulier les plus pauvres, ont une voix égale dans la gouvernance mondiale.",
+            visionTitle: "Pourquoi ce Gouvernement Mondial ?",
+            visionText: "Le monde est confronté à des inégalités économiques et sociales croissantes. Les nations riches dominent les décisions mondiales, tandis que les pays les plus pauvres restent marginalisés. Il est temps de changer cela.",
+            ourVisionTitle: "Notre Vision",
+            ourVisionText: "Notre objectif est de créer un gouvernement mondial équitable où chaque nation a une voix égale et où les décisions sont prises dans l'intérêt de tous."
+        },
+        sw: {
+            title: "Serikali ya Kidunia kwa Usawa",
+            subtitle: "Unganisha mataifa kwa ajili ya mustakabali wa usawa.",
+            manifestoTitle: "Manifesto ya Serikali ya Kidunia kwa Usawa",
+            manifestoText: "Tunaishi katika dunia inayoshikamana zaidi, ambapo changamoto za kimataifa zinahitaji hatua ya pamoja. Serikali ya Kidunia kwa Usawa inakusudia kuunda mfumo ambapo nchi zote, hasa zile maskini, zinapata sauti sawa katika utawala wa kimataifa.",
+            visionTitle: "Kwa Nini Serikali hii ya Kidunia?",
+            visionText: "Dunia inakutana na ongezeko la tofauti za kiuchumi na kijamii. Nchi tajiri zinatawala maamuzi ya kimataifa, huku nchi maskini zikibaki pembezoni. Wakati umefika wa kubadilisha hali hii.",
+            ourVisionTitle: "Dira Yetu",
+            ourVisionText: "Lengo letu ni kuunda serikali ya kidunia inayozingatia usawa ambapo kila taifa lina sauti sawa na ambapo maamuzi yanachukuliwa kwa faida ya wote."
+        },
+        ha: {
+            title: "Gwamnatin Duniya Don Daidaito",
+            subtitle: "Haɗa ƙasashe don kyakkyawar makoma.",
+            manifestoTitle: "Manufo ga Gwamnatin Duniya Don Daidaito",
+            manifestoText: "Muna rayuwa a cikin duniya mai haɗin kai, inda ƙalubale na duniya ke buƙatar aiki tare. Gwamnatin Duniya Don Daidaito tana nufin ƙirƙirar tsarin da zai ba kowane ƙasa, musamman waɗanda ke cikin talauci, dama ta yi muryar su a cikin shugabancin duniya.",
+            visionTitle: "Me Ya Sa Wannan Gwamnatin Duniya?",
+            visionText: "Duniya na fuskantar ƙaruwa cikin bambance-bambancen tattalin arziki da zamantakewa. Kasashe masu arziki suna jagorantar yanke shawara na duniya, yayin da kasashe masu talauci suke zama a gefen. Lokaci ya yi da za mu canza wannan.",
+            ourVisionTitle: "Manufarmu",
+            ourVisionText: "Manufarmu ita ce samar da gwamnati ta duniya mai daidaito inda kowace kasa ke da muryarta ta yi daidaito da kuma inda ake yanke shawara don amfanin kowa."
+        },
+        zh: {
+            title: "全球公平政府",
+            subtitle: "联合各国创造更加公平的未来。",
+            manifestoTitle: "全球公平政府宣言",
+            manifestoText: "我们生活在一个日益互联的世界，全球性挑战需要集体行动。全球公平政府的目标是创造一个框架，在这个框架中，所有国家，特别是最贫困的国家，都能在全球治理中拥有平等的发言权。",
+            visionTitle: "为什么要建立全球政府？",
+            visionText: "世界正面临日益严重的经济和社会不平等。富国主导全球决策，而最贫困的国家则被边缘化。是时候改变这一点了。",
+            ourVisionTitle: "我们的愿景",
+            ourVisionText: "我们的目标是建立一个全球公平政府，在这个政府中，每个国家都有平等的发言权，决策是为了所有人的利益而作出的。"
+        },
+        es: {
+            title: "Gobierno Mundial para la Equidad",
+            subtitle: "Unir a las naciones por un futuro más equitativo.",
+            manifestoTitle: "Manifiesto para un Gobierno Mundial para la Equidad",
+            manifestoText: "Vivimos en un mundo cada vez más interconectado, donde los desafíos globales requieren una acción colectiva. El Gobierno Mundial para la Equidad tiene como objetivo crear un marco en el que todos los países, especialmente los más pobres, tengan una voz igual en la gobernanza mundial.",
+            visionTitle: "¿Por qué este Gobierno Mundial?",
+            visionText: "El mundo enfrenta crecientes desigualdades económicas y sociales. Las naciones ricas dominan las decisiones globales, mientras que los países más pobres quedan marginados. Es hora de cambiar esto.",
+            ourVisionTitle: "Nuestra Visión",
+            ourVisionText: "Nuestro objetivo es crear un gobierno mundial equitativo donde cada nación tenga una voz igual y las decisiones se tomen en beneficio de todos."
+        },
+        en: {
+            title: "Global Government for Equity",
+            subtitle: "Unite nations for a more equitable future.",
+            manifestoTitle: "Manifesto for a Global Government for Equity",
+            manifestoText: "We live in an increasingly interconnected world, where global challenges require collective action. The Global Government for Equity aims to create a framework where all countries, especially the poorest, have an equal voice in global governance.",
+            visionTitle: "Why This Global Government?",
+            visionText: "The world is facing increasing economic and social inequalities. Rich nations dominate global decisions, while the poorest countries remain marginalized. It's time to change this.",
+            ourVisionTitle: "Our Vision",
+            ourVisionText: "Our goal is to create an equitable global government where every nation has an equal voice, and decisions are made for the benefit of all."
+        },
+        ar: {
+            title: "الحكومة العالمية من أجل العدالة",
+            subtitle: "توحد الأمم من أجل مستقبل أكثر عدلاً.",
+            manifestoTitle: "البيان من أجل الحكومة العالمية من أجل العدالة",
+            manifestoText: "نعيش في عالم مترابط بشكل متزايد، حيث تتطلب التحديات العالمية عملًا جماعيًا. تهدف الحكومة العالمية من أجل العدالة إلى إنشاء إطار حيث تتمتع جميع البلدان، وخاصة الأكثر فقراً، بصوت متساوٍ في الحوكمة العالمية.",
+            visionTitle: "لماذا هذه الحكومة العالمية؟",
+            visionText: "يواجه العالم تزايدًا في التفاوتات الاقتصادية والاجتماعية. تقوم الدول الغنية بالهيمنة على القرارات العالمية، في حين تبقى الدول الفقيرة مهمشة. حان الوقت لتغيير ذلك.",
+            ourVisionTitle: "رؤيتنا",
+            ourVisionText: "هدفنا هو إنشاء حكومة عالمية عادلة حيث يتمتع كل بلد بصوت متساوٍ، وتُتخذ القرارات من أجل مصلحة الجميع."
+        },
+        bn: {
+            title: "গ্লোবাল ইকুইটি গভর্নমেন্ট",
+            subtitle: "একটি আরও সমতার ভবিষ্যতের জন্য জাতিগুলিকে একত্রিত করুন।",
+            manifestoTitle: "গ্লোবাল ইকুইটি গভর্নমেন্টের জন্য ম্যানিফেস্টো",
+            manifestoText: "আমরা একটি ক্রমবর্ধমান সংযুক্ত বিশ্বের মধ্যে বাস করি, যেখানে বৈশ্বিক চ্যালেঞ্জগুলির জন্য সম্মিলিত উদ্যোগ প্রয়োজন। গ্লোবাল ইকুইটি গভর্নমেন্টের লক্ষ্য হল একটি কাঠামো তৈরি করা যেখানে সমস্ত দেশ, বিশেষত সবচেয়ে দরিদ্র দেশগুলি, বৈশ্বিক শাসনে সমান কণ্ঠস্বর পায়।",
+            visionTitle: "কেন এই গ্লোবাল গভর্নমেন্ট?",
+            visionText: "বিশ্ব অর্থনৈতিক এবং সামাজিক অসমতার মধ্যে বৃদ্ধি পাচ্ছে। ধনী দেশগুলি বৈশ্বিক সিদ্ধান্তগুলিতে আধিপত্য বিস্তার করে, তবে সবচেয়ে দরিদ্র দেশগুলি অগ্রাহ্য থাকে। এটা পরিবর্তন করার সময় এসেছে।",
+            ourVisionTitle: "আমাদের ভিশন",
+            ourVisionText: "আমাদের লক্ষ্য একটি ন্যায়সঙ্গত বিশ্বব্যাপী সরকার তৈরি করা যেখানে প্রতিটি দেশের সমান কণ্ঠস্বর রয়েছে এবং সিদ্ধান্তগুলি সবার স্বার্থে গ্রহণ করা হয়।"
+        },
+        pt: {
+            title: "Governo Global para a Equidade",
+            subtitle: "Unir as nações por um futuro mais equitativo.",
+            manifestoTitle: "Manifesto para um Governo Global para a Equidade",
+            manifestoText: "Vivemos em um mundo cada vez mais interconectado, onde os desafios globais exigem ação coletiva. O Governo Global para a Equidade visa criar uma estrutura onde todos os países, especialmente os mais pobres, tenham uma voz igual na governança global.",
+            visionTitle: "Por que este Governo Global?",
+            visionText: "O mundo está enfrentando desigualdades econômicas e sociais crescentes. As nações ricas dominam as decisões globais, enquanto os países mais pobres permanecem marginalizados. É hora de mudar isso.",
+            ourVisionTitle: "Nossa Visão",
+            ourVisionText: "Nosso objetivo é criar um governo global equitativo onde cada nação tenha uma voz igual e as decisões sejam tomadas no interesse de todos."
+        },
+        ru: {
+            title: "Глобальное правительство за справедливость",
+            subtitle: "Объедините нации ради более справедливого будущего.",
+            manifestoTitle: "Манифест за глобальное правительство за справедливость",
+            manifestoText: "Мы живем в мире, который становится все более взаимосвязанным, где глобальные проблемы требуют коллективных действий. Глобальное правительство за справедливость стремится создать структуру, в которой все страны, особенно беднейшие, имеют равный голос в глобальном управлении.",
+            visionTitle: "Почему это глобальное правительство?",
+            visionText: "Мир сталкивается с растущими экономическими и социальными неравенствами. Богатые страны доминируют в глобальных решениях, в то время как бедные страны остаются на обочине. Пришло время это изменить.",
+            ourVisionTitle: "Наше видение",
+            ourVisionText: "Наша цель — создать справедливое глобальное правительство, в котором каждая страна имеет равный голос, а решения принимаются в интересах всех."
+        }
+    };
+
+    function setLanguage(lang) {
+        document.getElementById("title").innerText = translations[lang].title;
+        document.getElementById("subtitle").innerText = translations[lang].subtitle;
+        document.getElementById("manifesto-title").innerText = translations[lang].manifestoTitle;
+        document.getElementById("manifesto-text").innerText = translations[lang].manifestoText;
+        document.getElementById("vision-title").innerText = translations[lang].visionTitle;
+        document.getElementById("vision-text").innerText = translations[lang].visionText;
+        document.getElementById("our-vision-title").innerText = translations[lang].ourVisionTitle;
+        document.getElementById("our-vision-text").innerText = translations[lang].ourVisionText;
+    }
+</script>
+
 </body>
-</html>
+</
