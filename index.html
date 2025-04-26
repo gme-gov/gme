@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GME - Gouvernent Mondial pour l'Équité</title>
+    <title>Gouvernement Mondial pour l'Équité</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #333;
             color: white;
+            padding: 15px;
             text-align: center;
-            padding: 20px;
         }
-        h1, h2 {
-            margin: 0;
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
         }
         section {
             padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 8px;
         }
         footer {
             text-align: center;
@@ -33,164 +42,87 @@
             background-color: #333;
             color: white;
         }
-        .language-select {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: white;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        .language-select select {
-            border: none;
-            padding: 5px;
-            font-size: 16px;
-        }
     </style>
 </head>
 <body>
-    <!-- Menu de langue -->
-    <div class="language-select">
-        <select onchange="changeLanguage(event)">
-            <option value="fr">Français</option>
-            <option value="en">English</option>
-            <option value="sw">Swahili</option>
-            <option value="ha">Hausa</option>
-        </select>
-    </div>
 
-    <header>
-        <h1>GME - Gouvernent Mondial pour l'Équité</h1>
-        <h2>Vers un monde plus équitable, unis pour une gouvernance mondiale juste et inclusive</h2>
-    </header>
+<header>
+    <h1 id="title">Gouvernement Mondial pour l'Équité</h1>
+    <p id="subtitle">Unissez les nations pour un avenir plus équitable.</p>
+</header>
 
-    <section id="vision">
-        <h2>Notre Vision</h2>
-        <p>Le Gouvernement Mondial pour l'Équité (GME) est une initiative visant à créer une gouvernance mondiale basée sur des principes d'équité, de solidarité et de justice sociale...</p>
-    </section>
+<nav>
+    <a href="#" onclick="setLanguage('fr')">Français</a>
+    <a href="#" onclick="setLanguage('sw')">Swahili</a>
+    <a href="#" onclick="setLanguage('ha')">Haoussa</a>
+</nav>
 
-    <section id="why">
-        <h2>Pourquoi un Gouvernement Mondial pour l'Équité ?</h2>
-        <p>Le monde actuel est confronté à des inégalités profondes et croissantes...</p>
-    </section>
+<section>
+    <h2 id="manifesto-title">Manifesto pour un Gouvernement Mondial pour l'Équité</h2>
+    <p id="manifesto-text">
+        Nous vivons dans un monde de plus en plus interconnecté, où les défis mondiaux nécessitent une action collective. 
+        Le Gouvernement Mondial pour l'Équité vise à créer un cadre où tous les pays, en particulier les plus pauvres, ont une voix égale dans la gouvernance mondiale.
+    </p>
+    <h3 id="vision-title">Pourquoi ce Gouvernement Mondial ?</h3>
+    <p id="vision-text">
+        Le monde est confronté à des inégalités économiques et sociales croissantes. Les nations riches dominent les décisions mondiales, 
+        tandis que les pays les plus pauvres restent marginalisés. Il est temps de changer cela.
+    </p>
+    <h3 id="our-vision-title">Notre Vision</h3>
+    <p id="our-vision-text">
+        Notre objectif est de créer un gouvernement mondial équitable où chaque nation a une voix égale et où les décisions sont prises dans l'intérêt de tous.
+    </p>
+</section>
 
-    <section id="goals">
-        <h2>Nos Objectifs</h2>
-        <ul>
-            <li>Former une coalition mondiale de pays pour une plateforme de dialogue équitable.</li>
-            <li>Mettre en place un système économique mondial basé sur la redistribution des richesses.</li>
-            <li>Introduire des réformes globales pour garantir des droits égaux et une meilleure qualité de vie pour tous.</li>
-            <li>Promouvoir un système de gouvernance mondiale transparent et démocratique.</li>
-        </ul>
-    </section>
+<footer>
+    <p>&copy; 2025 Gouvernement Mondial pour l'Équité - Tous droits réservés</p>
+</footer>
 
-    <section id="join">
-        <h2>Rejoignez-nous</h2>
-        <p>Nous invitons chaque citoyen, chaque nation, à se joindre à cette cause mondiale...</p>
-    </section>
-
-    <footer>
-        <p>Contactez-nous : <a href="mailto:gme-gov@outlook.com">gme-gov@outlook.com</a></p>
-        <p>Site Web : <a href="https://gme.ddns.net">gme.ddns.net</a></p>
-    </footer>
-
-    <script>
-        function changeLanguage(event) {
-            const language = event.target.value;
-            if (language === "fr") {
-                document.getElementById("vision").innerHTML = `
-                    <h2>Notre Vision</h2>
-                    <p>Le Gouvernement Mondial pour l'Équité (GME) est une initiative visant à créer une gouvernance mondiale basée sur des principes d'équité, de solidarité et de justice sociale...</p>
-                `;
-                document.getElementById("why").innerHTML = `
-                    <h2>Pourquoi un Gouvernement Mondial pour l'Équité ?</h2>
-                    <p>Le monde actuel est confronté à des inégalités profondes et croissantes...</p>
-                `;
-                document.getElementById("goals").innerHTML = `
-                    <h2>Nos Objectifs</h2>
-                    <ul>
-                        <li>Former une coalition mondiale de pays pour une plateforme de dialogue équitable.</li>
-                        <li>Mettre en place un système économique mondial basé sur la redistribution des richesses.</li>
-                        <li>Introduire des réformes globales pour garantir des droits égaux et une meilleure qualité de vie pour tous.</li>
-                        <li>Promouvoir un système de gouvernance mondiale transparent et démocratique.</li>
-                    </ul>
-                `;
-                document.getElementById("join").innerHTML = `
-                    <h2>Rejoignez-nous</h2>
-                    <p>Nous invitons chaque citoyen, chaque nation, à se joindre à cette cause mondiale...</p>
-                `;
-            }
-            else if (language === "en") {
-                document.getElementById("vision").innerHTML = `
-                    <h2>Our Vision</h2>
-                    <p>The Global Government for Equity (GME) is an initiative to create global governance based on principles of fairness, solidarity, and social justice...</p>
-                `;
-                document.getElementById("why").innerHTML = `
-                    <h2>Why a Global Government for Equity?</h2>
-                    <p>The world is facing deep and growing inequalities...</p>
-                `;
-                document.getElementById("goals").innerHTML = `
-                    <h2>Our Goals</h2>
-                    <ul>
-                        <li>Form a global coalition of countries for an equitable dialogue platform.</li>
-                        <li>Implement a global economic system based on wealth redistribution.</li>
-                        <li>Introduce global reforms to ensure equal rights and a better quality of life for all.</li>
-                        <li>Promote a transparent and democratic global governance system.</li>
-                    </ul>
-                `;
-                document.getElementById("join").innerHTML = `
-                    <h2>Join Us</h2>
-                    <p>We invite every citizen, every nation, to join this global cause...</p>
-                `;
-            }
-            else if (language === "sw") {
-                document.getElementById("vision").innerHTML = `
-                    <h2>Maono Yetu</h2>
-                    <p>Serikali ya Dunia kwa Usawa (GME) ni juhudi ya kuunda utawala wa dunia unaojengwa juu ya kanuni za usawa, mshikamano, na haki ya kijamii...</p>
-                `;
-                document.getElementById("why").innerHTML = `
-                    <h2>Kwanini Serikali ya Dunia kwa Usawa?</h2>
-                    <p>Dunia inakutana na tofauti kubwa na inayoongezeka kila wakati...</p>
-                `;
-                document.getElementById("goals").innerHTML = `
-                    <h2>Madhumuni Yetu</h2>
-                    <ul>
-                        <li>Kunda muungano wa kimataifa wa nchi kwa jukwaa la majadiliano lenye usawa.</li>
-                        <li>Kuweka mfumo wa kiuchumi wa dunia unaotegemea usambazaji wa mali.</li>
-                        <li>Kuanza mapinduzi ya kimataifa kuhakikisha haki sawa na ubora bora wa maisha kwa wote.</li>
-                        <li>Kukuza mfumo wa utawala wa dunia unao wazi na kidemokrasia.</li>
-                    </ul>
-                `;
-                document.getElementById("join").innerHTML = `
-                    <h2>Jiunge Nasi</h2>
-                    <p>Tunawakaribisha kila raia, kila taifa, kuungana na juhudi hii ya kimataifa...</p>
-                `;
-            }
-            else if (language === "ha") {
-                document.getElementById("vision").innerHTML = `
-                    <h2>Hangenmu Mu</h2>
-                    <p>Gwamnatin Duniya ta Daidaito (GME) wata kokarin kafa shugabanci na duniya wanda aka gina bisa ka’idodi na adalci, hadin kai, da adalcin zamantakewa...</p>
-                `;
-                document.getElementById("why").innerHTML = `
-                    <h2>Me yasa Gwamnatin Duniya ta Daidaito?</h2>
-                    <p>Duniya tana fuskantar rashin daidaito mai zurfi da karuwa...</p>
-                `;
-                document.getElementById("goals").innerHTML = `
-                    <h2>Manufarmu</h2>
-                    <ul>
-                        <li>Hada hadin kan kasashe a duniya don kafa dandalin tattaunawa mai adalci.</li>
-                        <li>Shirya tsarin tattalin arzikin duniya da ke dogara akan rarraba dukiya.</li>
-                        <li>Kaddamar da sauye-sauye a duniya don tabbatar da hakki na daukaka da ingancin rayuwa ga kowa da kowa.</li>
-                        <li>Karfafa tsarin shugabancin duniya mai gaskiya da na dimokuradiyya.</li>
-                    </ul>
-                `;
-                document.getElementById("join").innerHTML = `
-                    <h2>Shiga Tare Da Mu</h2>
-                    <p>Muna gayyatar kowanne ɗan ƙasa, kowanne ƙasa, don haɗuwa da wannan babban aiki na duniya...</p>
-                `;
-            }
+<script>
+    const translations = {
+        fr: {
+            title: "Gouvernement Mondial pour l'Équité",
+            subtitle: "Unissez les nations pour un avenir plus équitable.",
+            manifestoTitle: "Manifesto pour un Gouvernement Mondial pour l'Équité",
+            manifestoText: "Nous vivons dans un monde de plus en plus interconnecté, où les défis mondiaux nécessitent une action collective. Le Gouvernement Mondial pour l'Équité vise à créer un cadre où tous les pays, en particulier les plus pauvres, ont une voix égale dans la gouvernance mondiale.",
+            visionTitle: "Pourquoi ce Gouvernement Mondial ?",
+            visionText: "Le monde est confronté à des inégalités économiques et sociales croissantes. Les nations riches dominent les décisions mondiales, tandis que les pays les plus pauvres restent marginalisés. Il est temps de changer cela.",
+            ourVisionTitle: "Notre Vision",
+            ourVisionText: "Notre objectif est de créer un gouvernement mondial équitable où chaque nation a une voix égale et où les décisions sont prises dans l'intérêt de tous."
+        },
+        sw: {
+            title: "Serikali ya Kidunia kwa Usawa",
+            subtitle: "Unganisha mataifa kwa ajili ya mustakabali wa usawa.",
+            manifestoTitle: "Manifesto ya Serikali ya Kidunia kwa Usawa",
+            manifestoText: "Tunaishi katika dunia inayoshikamana zaidi, ambapo changamoto za kimataifa zinahitaji hatua ya pamoja. Serikali ya Kidunia kwa Usawa inakusudia kuunda mfumo ambapo nchi zote, hasa zile maskini, zinapata sauti sawa katika utawala wa kimataifa.",
+            visionTitle: "Kwa Nini Serikali hii ya Kidunia?",
+            visionText: "Dunia inakutana na ongezeko la tofauti za kiuchumi na kijamii. Nchi tajiri zinatawala maamuzi ya kimataifa, huku nchi maskini zikibaki pembezoni. Wakati umefika wa kubadilisha hali hii.",
+            ourVisionTitle: "Dira Yetu",
+            ourVisionText: "Lengo letu ni kuunda serikali ya kidunia inayozingatia usawa ambapo kila taifa lina sauti sawa na ambapo maamuzi yanachukuliwa kwa faida ya wote."
+        },
+        ha: {
+            title: "Gwamnatin Duniya Don Daidaito",
+            subtitle: "Haɗa ƙasashe don kyakkyawar makoma.",
+            manifestoTitle: "Manufo ga Gwamnatin Duniya Don Daidaito",
+            manifestoText: "Muna rayuwa a cikin duniya mai haɗin kai, inda ƙalubale na duniya ke buƙatar aiki tare. Gwamnatin Duniya Don Daidaito tana nufin ƙirƙirar tsarin da zai ba kowane ƙasa, musamman waɗanda ke cikin talauci, dama ta yi muryar su a cikin shugabancin duniya.",
+            visionTitle: "Me Ya Sa Wannan Gwamnatin Duniya?",
+            visionText: "Duniya na fuskantar ƙaruwa cikin bambance-bambancen tattalin arziki da zamantakewa. Kasashe masu arziki suna jagorantar yanke shawara na duniya, yayin da kasashe masu talauci suke zama a gefen. Lokaci ya yi da za mu canza wannan.",
+            ourVisionTitle: "Manufarmu",
+            ourVisionText: "Manufarmu ita ce samar da gwamnati ta duniya mai daidaito inda kowace kasa ke da muryarta ta yi daidaito da kuma inda ake yanke shawara don amfanin kowa."
         }
-    </script>
+    };
+
+    function setLanguage(lang) {
+        document.getElementById("title").innerText = translations[lang].title;
+        document.getElementById("subtitle").innerText = translations[lang].subtitle;
+        document.getElementById("manifesto-title").innerText = translations[lang].manifestoTitle;
+        document.getElementById("manifesto-text").innerText = translations[lang].manifestoText;
+        document.getElementById("vision-title").innerText = translations[lang].visionTitle;
+        document.getElementById("vision-text").innerText = translations[lang].visionText;
+        document.getElementById("our-vision-title").innerText = translations[lang].ourVisionTitle;
+        document.getElementById("our-vision-text").innerText = translations[lang].ourVisionText;
+    }
+</script>
+
 </body>
 </html>
