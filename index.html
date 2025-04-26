@@ -55,6 +55,16 @@
     <a href="#" onclick="setLanguage('fr')">Français</a>
     <a href="#" onclick="setLanguage('sw')">Swahili</a>
     <a href="#" onclick="setLanguage('ha')">Haoussa</a>
+    <a href="#" onclick="setLanguage('zh')">Chinois (Mandarin)</a>
+    <a href="#" onclick="setLanguage('es')">Espagnol</a>
+    <a href="#" onclick="setLanguage('en')">Anglais</a>
+    <a href="#" onclick="setLanguage('hi')">Hindi</a>
+    <a href="#" onclick="setLanguage('ar')">Arabe</a>
+    <a href="#" onclick="setLanguage('bn')">Bengali</a>
+    <a href="#" onclick="setLanguage('pt')">Portugais</a>
+    <a href="#" onclick="setLanguage('ru')">Russe</a>
+    <a href="#" onclick="setLanguage('ja')">Japonais</a>
+    <a href="#" onclick="setLanguage('pa')">Punjabi</a>
 </nav>
 
 <section>
@@ -109,20 +119,33 @@
             visionText: "Duniya na fuskantar ƙaruwa cikin bambance-bambancen tattalin arziki da zamantakewa. Kasashe masu arziki suna jagorantar yanke shawara na duniya, yayin da kasashe masu talauci suke zama a gefen. Lokaci ya yi da za mu canza wannan.",
             ourVisionTitle: "Manufarmu",
             ourVisionText: "Manufarmu ita ce samar da gwamnati ta duniya mai daidaito inda kowace kasa ke da muryarta ta yi daidaito da kuma inda ake yanke shawara don amfanin kowa."
-        }
-    };
-
-    function setLanguage(lang) {
-        document.getElementById("title").innerText = translations[lang].title;
-        document.getElementById("subtitle").innerText = translations[lang].subtitle;
-        document.getElementById("manifesto-title").innerText = translations[lang].manifestoTitle;
-        document.getElementById("manifesto-text").innerText = translations[lang].manifestoText;
-        document.getElementById("vision-title").innerText = translations[lang].visionTitle;
-        document.getElementById("vision-text").innerText = translations[lang].visionText;
-        document.getElementById("our-vision-title").innerText = translations[lang].ourVisionTitle;
-        document.getElementById("our-vision-text").innerText = translations[lang].ourVisionText;
-    }
-</script>
-
-</body>
-</html>
+        },
+        zh: {
+            title: "全球公平政府",
+            subtitle: "团结各国，共同迈向更加公正的未来。",
+            manifestoTitle: "全球公平政府宣言",
+            manifestoText: "我们生活在一个日益互联的世界，全球性挑战需要集体行动。全球公平政府的目标是创建一个框架，使所有国家，特别是最贫困的国家，都能在全球治理中拥有平等的声音。",
+            visionTitle: "为什么需要全球政府？",
+            visionText: "世界正面临日益增长的经济和社会不平等。富裕国家主导全球决策，而最贫困的国家被边缘化。是时候改变这种局面了。",
+            ourVisionTitle: "我们的愿景",
+            ourVisionText: "我们的目标是创建一个公平的全球政府，每个国家都有平等的发言权，并在全体利益的基础上做出决策。"
+        },
+        es: {
+            title: "Gobierno Mundial para la Equidad",
+            subtitle: "Unir las naciones para un futuro más justo.",
+            manifestoTitle: "Manifiesto para un Gobierno Mundial para la Equidad",
+            manifestoText: "Vivimos en un mundo cada vez más interconectado, donde los desafíos globales requieren acción colectiva. El Gobierno Mundial para la Equidad tiene como objetivo crear un marco en el que todos los países, especialmente los más pobres, tengan una voz igual en la gobernanza mundial.",
+            visionTitle: "¿Por qué este Gobierno Mundial?",
+            visionText: "El mundo enfrenta crecientes desigualdades económicas y sociales. Las naciones ricas dominan las decisiones mundiales, mientras que los países más pobres siguen marginados. Es hora de cambiar esto.",
+            ourVisionTitle: "Nuestra Visión",
+            ourVisionText: "Nuestro objetivo es crear un gobierno mundial equitativo en el que cada nación tenga una voz igual y donde las decisiones se tomen en beneficio de todos."
+        },
+        en: {
+            title: "World Government for Equity",
+            subtitle: "Unite nations for a fairer future.",
+            manifestoTitle: "Manifesto for a World Government for Equity",
+            manifestoText: "We live in an increasingly interconnected world where global challenges require collective action. The World Government for Equity aims to create a framework where all countries, especially the poorest, have an equal voice in global governance.",
+            visionTitle: "Why this World Government?",
+            visionText: "The world faces rising economic and social inequalities. Wealthy nations dominate global decision-making, while the poorest nations remain marginalized. It is time to change this.",
+            ourVisionTitle: "Our Vision",
+            ourVisionText: "Our goal is to create a fair global government where every nation has an equal voice, and decisions are made in the interest of all
