@@ -99,6 +99,7 @@
 </footer>
 
 <script>
+    // Définition des traductions pour chaque langue
     const translations = {
         fr: {
             title: "Gouvernement Mondial pour l'Équité",
@@ -122,23 +123,26 @@
             ourVisionTitle: "Our Vision",
             ourVisionText: "Our goal is to create a global government of equity where every nation has an equal voice and decisions are made in the interest of all.",
             manifestoDetailsTitle: "Principles of Our Manifesto",
-            manifestoDetailsText: "1. **Equity**: Every nation, regardless of its wealth or size, must have an equal voice in global decisions. We believe that global justice comes through equality of rights between all nations. <br> 2. **Solidarity**: The fight against poverty, economic inequality, and social crises must be at the heart of international action. Aid should go to the most vulnerable, not just the already powerful countries. <br> 3. **Sustainability**: Global policies must focus on sustainable development that respects the environment, ensuring a viable future for future generations. <br> 4. **Global Democracy**: The global governance system we propose must be based on democracy, with equal participation of all countries in decision-making. <br> 5. **Shared Responsibility**: Rich countries must share the burden of global justice and resource distribution, contributing to a fairer world."
+            manifestoDetailsText: "1. **Equity**: Every nation, regardless of its wealth or size, must have an equal voice in global decisions. We believe that global justice comes through equality of rights between all nations. <br> 2. **Solidarity**: The fight against poverty, economic inequality, and social crises must be at the heart of international action. Aid must go to the most vulnerable, not just to already powerful nations. <br> 3. **Sustainability**: Global policies must be aimed at sustainable development and environmental respect, ensuring a viable future for future generations. <br> 4. **Global Democracy**: The global governance system we propose must be based on democracy, with equal participation of all nations in decision-making. <br> 5. **Shared Responsibility**: Rich countries must share the burden of global justice and resource distribution, contributing to a fairer world."
         },
-        // Add more translations for other languages as needed...
+        // Add additional languages as needed...
     };
 
+    // Fonction pour changer la langue de la page
     function setLanguage(language) {
         const translation = translations[language];
-        document.getElementById('title').innerText = translation.title;
-        document.getElementById('subtitle').innerText = translation.subtitle;
-        document.getElementById('manifesto-title').innerText = translation.manifestoTitle;
-        document.getElementById('manifesto-text').innerHTML = translation.manifestoText;
-        document.getElementById('vision-title').innerText = translation.visionTitle;
-        document.getElementById('vision-text').innerText = translation.visionText;
-        document.getElementById('our-vision-title').innerText = translation.ourVisionTitle;
-        document.getElementById('our-vision-text').innerText = translation.ourVisionText;
-        document.getElementById('manifesto-details-title').innerText = translation.manifestoDetailsTitle;
-        document.getElementById('manifesto-details-text').innerHTML = translation.manifestoDetailsText;
+        if (translation) {
+            document.getElementById('title').innerText = translation.title;
+            document.getElementById('subtitle').innerText = translation.subtitle;
+            document.getElementById('manifesto-title').innerText = translation.manifestoTitle;
+            document.getElementById('manifesto-text').innerHTML = translation.manifestoText;
+            document.getElementById('vision-title').innerText = translation.visionTitle;
+            document.getElementById('vision-text').innerText = translation.visionText;
+            document.getElementById('our-vision-title').innerText = translation.ourVisionTitle;
+            document.getElementById('our-vision-text').innerText = translation.ourVisionText;
+            document.getElementById('manifesto-details-title').innerText = translation.manifestoDetailsTitle;
+            document.getElementById('manifesto-details-text').innerHTML = translation.manifestoDetailsText;
+        }
     }
 </script>
 
