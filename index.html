@@ -20,18 +20,15 @@
         nav {
             background-color: #444;
             overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            padding: 14px 16px;
             text-align: center;
-            text-decoration: none;
         }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
+        nav select {
+            padding: 10px;
+            margin: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 16px;
         }
         section {
             padding: 20px;
@@ -52,17 +49,28 @@
 </header>
 
 <nav>
-    <a href="#" onclick="setLanguage('fr')">Français</a>
-    <a href="#" onclick="setLanguage('en')">Anglais</a>
-    <a href="#" onclick="setLanguage('es')">Espagnol</a>
-    <a href="#" onclick="setLanguage('sw')">Swahili</a>
-    <a href="#" onclick="setLanguage('ha')">Haoussa</a>
-    <a href="#" onclick="setLanguage('zh')">Chinois</a>
-    <a href="#" onclick="setLanguage('ar')">Arabe</a>
-    <a href="#" onclick="setLanguage('bn')">Bengali</a>
-    <a href="#" onclick="setLanguage('pt')">Portugais</a>
-    <a href="#" onclick="setLanguage('ru')">Russe</a>
-    <a href="#" onclick="setLanguage('ja')">Japonais</a>
+    <select id="language-selector" onchange="setLanguage(this.value)">
+        <option value="fr">Français</option>
+        <option value="en">Anglais</option>
+        <option value="es">Espagnol</option>
+        <option value="sw">Swahili</option>
+        <option value="ha">Haoussa</option>
+        <option value="zh">Chinois</option>
+        <option value="ar">Arabe</option>
+        <option value="bn">Bengali</option>
+        <option value="pt">Portugais</option>
+        <option value="ru">Russe</option>
+        <option value="ja">Japonais</option>
+        <option value="de">Allemand</option>
+        <option value="ko">Coréen</option>
+        <option value="fr-CA">Français (Canada)</option>
+        <option value="it">Italien</option>
+        <option value="tr">Turc</option>
+        <option value="pl">Polonais</option>
+        <option value="uk">Ukrainien</option>
+        <option value="id">Indonésien</option>
+        <option value="vi">Vietnamien</option>
+    </select>
 </nav>
 
 <section>
@@ -80,18 +88,6 @@
     <p id="our-vision-text">
         Notre objectif est de créer un gouvernement mondial équitable où chaque nation a une voix égale et où les décisions sont prises dans l'intérêt de tous.
     </p>
-    <h3 id="manifesto-details-title">Les Principes de Notre Manifeste</h3>
-    <p id="manifesto-details-text">
-        1. **Équité** : Chaque nation, peu importe sa richesse ou sa taille, doit avoir une voix égale dans les décisions mondiales. Nous croyons que la justice mondiale passe par l'égalité des droits entre toutes les nations.
-        <br>
-        2. **Solidarité** : La lutte contre la pauvreté, les inégalités économiques et les crises sociales doit être au cœur de l'action internationale. L'aide doit aller aux plus vulnérables et non seulement aux pays déjà puissants.
-        <br>
-        3. **Durabilité** : Les politiques mondiales doivent être orientées vers un développement durable et respectueux de l'environnement, garantissant ainsi un avenir viable pour les générations futures.
-        <br>
-        4. **Démocratie mondiale** : Le système de gouvernance mondiale que nous proposons doit être fondé sur la démocratie, avec une participation égale de tous les pays dans la prise de décision.
-        <br>
-        5. **Responsabilité partagée** : Les pays riches doivent partager la responsabilité du fardeau mondial en matière de justice sociale et de répartition des ressources, contribuant ainsi à un monde plus équitable.
-    </p>
 </section>
 
 <footer>
@@ -99,8 +95,7 @@
 </footer>
 
 <script>
-    // Définition des traductions pour chaque langue
-    const translations = {
+    const content = {
         fr: {
             title: "Gouvernement Mondial pour l'Équité",
             subtitle: "Unissez les nations pour un avenir plus équitable.",
@@ -109,9 +104,7 @@
             visionTitle: "Pourquoi ce Gouvernement Mondial ?",
             visionText: "Le monde est confronté à des inégalités économiques et sociales croissantes. Les nations riches dominent les décisions mondiales, tandis que les pays les plus pauvres restent marginalisés. Il est temps de changer cela.",
             ourVisionTitle: "Notre Vision",
-            ourVisionText: "Notre objectif est de créer un gouvernement mondial équitable où chaque nation a une voix égale et où les décisions sont prises dans l'intérêt de tous.",
-            manifestoDetailsTitle: "Les Principes de Notre Manifeste",
-            manifestoDetailsText: "1. **Équité** : Chaque nation, peu importe sa richesse ou sa taille, doit avoir une voix égale dans les décisions mondiales. Nous croyons que la justice mondiale passe par l'égalité des droits entre toutes les nations. <br> 2. **Solidarité** : La lutte contre la pauvreté, les inégalités économiques et les crises sociales doit être au cœur de l'action internationale. L'aide doit aller aux plus vulnérables et non seulement aux pays déjà puissants. <br> 3. **Durabilité** : Les politiques mondiales doivent être orientées vers un développement durable et respectueux de l'environnement, garantissant ainsi un avenir viable pour les générations futures. <br> 4. **Démocratie mondiale** : Le système de gouvernance mondiale que nous proposons doit être fondé sur la démocratie, avec une participation égale de tous les pays dans la prise de décision. <br> 5. **Responsabilité partagée** : Les pays riches doivent partager la responsabilité du fardeau mondial en matière de justice sociale et de répartition des ressources, contribuant ainsi à un monde plus équitable."
+            ourVisionText: "Notre objectif est de créer un gouvernement mondial équitable où chaque nation a une voix égale et où les décisions sont prises dans l'intérêt de tous."
         },
         en: {
             title: "Global Government for Equity",
@@ -121,27 +114,32 @@
             visionTitle: "Why this Global Government?",
             visionText: "The world is facing growing economic and social inequalities. Rich nations dominate global decisions, while the poorest countries remain marginalized. It's time to change that.",
             ourVisionTitle: "Our Vision",
-            ourVisionText: "Our goal is to create a global government of equity where every nation has an equal voice and decisions are made in the interest of all.",
-            manifestoDetailsTitle: "Principles of Our Manifesto",
-            manifestoDetailsText: "1. **Equity**: Every nation, regardless of its wealth or size, must have an equal voice in global decisions. We believe that global justice comes through equality of rights between all nations. <br> 2. **Solidarity**: The fight against poverty, economic inequality, and social crises must be at the heart of international action. Aid must go to the most vulnerable, not just to already powerful nations. <br> 3. **Sustainability**: Global policies must be aimed at sustainable development and environmental respect, ensuring a viable future for future generations. <br> 4. **Global Democracy**: The global governance system we propose must be based on democracy, with equal participation of all nations in decision-making. <br> 5. **Shared Responsibility**: Rich countries must share the burden of global justice and resource distribution, contributing to a fairer world."
+            ourVisionText: "Our goal is to create a global government of equity where every nation has an equal voice and decisions are made in the interest of all."
         },
-        // Add additional languages as needed...
+        es: {
+            title: "Gobierno Global para la Equidad",
+            subtitle: "Unir naciones para un futuro más justo.",
+            manifestoTitle: "Manifiesto para un Gobierno Global para la Equidad",
+            manifestoText: "Vivimos en un mundo cada vez más interconectado, donde los desafíos globales requieren una acción colectiva. El Gobierno Global para la Equidad busca crear un marco donde todos los países, especialmente los más pobres, tengan una voz igual en la gobernanza global.",
+            visionTitle: "¿Por qué este Gobierno Global?",
+            visionText: "El mundo enfrenta crecientes desigualdades económicas y sociales. Las naciones ricas dominan las decisiones globales, mientras que los países más pobres permanecen marginados. Es hora de cambiar eso.",
+            ourVisionTitle: "Nuestra Visión",
+            ourVisionText: "Nuestro objetivo es crear un gobierno global equitativo donde cada nación tenga una voz igual y las decisiones se tomen en interés de todos."
+        },
+        // Ajouter d'autres traductions ici pour les autres langues
     };
 
-    // Fonction pour changer la langue de la page
-    function setLanguage(language) {
-        const translation = translations[language];
-        if (translation) {
-            document.getElementById('title').innerText = translation.title;
-            document.getElementById('subtitle').innerText = translation.subtitle;
-            document.getElementById('manifesto-title').innerText = translation.manifestoTitle;
-            document.getElementById('manifesto-text').innerHTML = translation.manifestoText;
-            document.getElementById('vision-title').innerText = translation.visionTitle;
-            document.getElementById('vision-text').innerText = translation.visionText;
-            document.getElementById('our-vision-title').innerText = translation.ourVisionTitle;
-            document.getElementById('our-vision-text').innerText = translation.ourVisionText;
-            document.getElementById('manifesto-details-title').innerText = translation.manifestoDetailsTitle;
-            document.getElementById('manifesto-details-text').innerHTML = translation.manifestoDetailsText;
+    function setLanguage(lang) {
+        const selectedContent = content[lang];
+        if (selectedContent) {
+            document.getElementById('title').innerText = selectedContent.title;
+            document.getElementById('subtitle').innerText = selectedContent.subtitle;
+            document.getElementById('manifesto-title').innerText = selectedContent.manifestoTitle;
+            document.getElementById('manifesto-text').innerText = selectedContent.manifestoText;
+            document.getElementById('vision-title').innerText = selectedContent.visionTitle;
+            document.getElementById('vision-text').innerText = selectedContent.visionText;
+            document.getElementById('our-vision-title').innerText = selectedContent.ourVisionTitle;
+            document.getElementById('our-vision-text').innerText = selectedContent.ourVisionText;
         }
     }
 </script>
